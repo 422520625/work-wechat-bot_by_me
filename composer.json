@@ -1,0 +1,47 @@
+{
+    "name": "trigold/work-wechat-bot",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "laravel/framework": ">=8.0",
+        "guzzlehttp/guzzle": "^6.5 || ^7.5",
+        "monolog/monolog": "^2.9",
+      "ext-json": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "pestphp/pest": "^1.21"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Trigold\\WechatBot\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "trigold",
+            "email": "422520625@qq.com"
+        }
+    ],
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "cs-fix": "php-cs-fixer fix"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trigold\\WechatBot\\WorkWechatServiceProvider"
+            ],
+            "aliases": {
+                "WorkWeixinBot": "PhpPackagist\\WorkWeixinBot\\Laravel\\Facades\\WorkWeixinBot"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
